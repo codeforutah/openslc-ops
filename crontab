@@ -1,1 +1,2 @@
 5 0 * * * sudo -u postgres /home/ubuntu/ops/backup_scripts/pg/pg_backup_rotated.sh
+30 0 * * * sudo -u postgres /home/ubuntu/ops/backup_scripts/s3_backup.sh
