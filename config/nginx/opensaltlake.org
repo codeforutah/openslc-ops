@@ -13,10 +13,12 @@ server {
 
   root /usr/share/nginx/opensaltlake.org;
 
-  location / {
-    index index.html;
-    try_files $uri $uri/ /index.html;
-  }
+  rewrite ^(.*) http://www.openslc.org$1 redirect;
+
+#  location / {
+#    index index.html;
+#    try_files $uri $uri/ /index.html;
+#  }
 
   error_page 500 502 503 504 /500.html;
   client_max_body_size 1M;
